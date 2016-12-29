@@ -1,7 +1,7 @@
 #include "application.h"
 #include "ReclaimerLabs_Thermocouple.h"
 
-#include "type_k.cpp"
+#include "type_k.h"
 
 int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float voltage_mV, float cold_junc_C, float *hot_junc_C) {
     const thermo_lookup_entry_t  *thermo_lookup_table;
