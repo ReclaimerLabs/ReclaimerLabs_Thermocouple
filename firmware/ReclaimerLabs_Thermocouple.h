@@ -5,8 +5,6 @@ typedef struct {
   float mV;
 } thermo_lookup_entry_t;
 
-#include "type_k.cpp"
-
 typedef enum {
     TYPE_K
 } thermoType_t;
