@@ -1,0 +1,7 @@
+{
+	"name": "ReclaimerLabs_Thermocouple",
+	"author": "Jason Cerundolo",
+	"version": "0.9.0",
+	"license": "MIT",
+	"description": "Calculate thermocouple hot junction temperatures with cold junction compensation."
+}
