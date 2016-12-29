@@ -1,3 +1,6 @@
+#ifndef RECLAIMERLABS_THERMOCOUPLE_H
+#define RECLAIMERLABS_THERMOCOUPLE_H
+
 #include "application.h"
 
 typedef struct {
@@ -16,3 +19,5 @@ class ReclaimerLabs_Thermocouple {
     
     private:
 };
+
+#endif /* RECLAIMERLABS_THERMOCOUPLE_H */

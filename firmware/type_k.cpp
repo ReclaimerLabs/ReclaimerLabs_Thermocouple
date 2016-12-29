@@ -1,3 +1,5 @@
+#include "ReclaimerLabs_Thermocouple.h"
+
 #define TYPE_K_LOOKUP_SIZE 85
 thermo_lookup_entry_t thermo_lookup_type_k[TYPE_K_LOOKUP_SIZE] = {
 { .temp_C= -270, .mV= -6.458 },
