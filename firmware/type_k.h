@@ -85,4 +85,4 @@ thermo_lookup_entry_t thermo_lookup_type_k[TYPE_K_LOOKUP_SIZE] = {
 { .temp_C= 1350, .mV= 54.138 },
 { .temp_C= 1360, .mV= 54.479 },
 { .temp_C= 1370, .mV= 54.819 },
-}
+};
