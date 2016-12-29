@@ -2,6 +2,7 @@
 #include "ReclaimerLabs_Thermocouple.h"
 
 #include "type_k.h"
+#include "type_s.h"
 
 int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float voltage_mV, float cold_junc_C, float *hot_junc_C) {
     const thermo_lookup_entry_t  *thermo_lookup_table;
@@ -11,6 +12,10 @@ int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float vol
         case (TYPE_K):
             thermo_lookup_table = thermo_lookup_type_k;
             thermo_lookup_size  = TYPE_K_LOOKUP_SIZE;
+            break;
+        case (TYPE_S):
+            thermo_lookup_table = thermo_lookup_type_s;
+            thermo_lookup_size  = TYPE_S_LOOKUP_SIZE;
             break;
         default:
             return -1;
