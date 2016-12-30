@@ -9,7 +9,7 @@ typedef struct {
 } thermo_lookup_entry_t;
 
 typedef enum {
-    TYPE_K
+    TYPE_K,
     TYPE_S
 } thermoType_t;
 
