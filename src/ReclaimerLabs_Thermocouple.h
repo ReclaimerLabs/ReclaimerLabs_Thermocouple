@@ -1,7 +1,7 @@
 #ifndef RECLAIMERLABS_THERMOCOUPLE_H
 #define RECLAIMERLABS_THERMOCOUPLE_H
 
-#include "application.h"
+#include <application.h>
 
 typedef struct {
   float temp_C;

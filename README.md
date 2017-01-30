@@ -1,32 +1,21 @@
-Copyright (c) 2016 Jason Cerundolo
+# Introduction
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This library provides a function that takes in a differential thermocouple voltage, thermocouple type, and cold junction temperature to calculate a hot junction temperature. It uses a lookup table generated from the [**NIST standards**](https://srdata.nist.gov/its90/download/download.html). The calculation method is done as described in section 3 of [**App Note SBAA189**](http://www.ti.com/lit/an/sbaa189/sbaa189.pdf) from TI. 
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Check out the other github repos for more information on a library to talk to the [**ADS1118 ADC**](https://github.com/ReclaimerLabs/ReclaimerLabs_ADS1118) and a [**board**](https://github.com/ReclaimerLabs/Remote-Thermal-Monitor) that connects it to a Particle Photon. 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+# Example Usage
 
-Reclaimer Labs Thermocouple Library
-==================
+The function is implemented a static method, so you do not need to create a ReclaimerLabs_Thermocouple object. You can simply call ReclaimerLabs_Thermocouple::calc_temp(). 
 
-This library provides a basic function to convert a cold junction temperature 
-and a differential voltage across a thermocouple into a hot junction 
-temperature. It uses lookup tables to achieve reasonable accuracy without 
-large computations. 
+For example, TYPE_K is the thermocouple type. diff_volt_mV is the differential voltage in millivolts. cold_junc_C is a float holding the cold junction temperature in degrees Celsius. If return_val is 0, then hot_junc_C will hold the hot junction temperature in degrees Celsius. 
 
-As of now, the only support thermocouple type is Type-K. 
+```
+    float hot_junc_C;
+    int32_t return_val;
+    return_val = ReclaimerLabs_Thermocouple::calc_temp(TYPE_K, diff_volt_mV, cold_junc_C, &hot_junc_C);
+```
 
-This library pairs well with the ReclaimerLabs_ADS1118, which can measure 
-the cold junction and the differential voltage on two thermocouples. 
+# Questions and Comments
+
+If you have questions or comments, you can email me directly at jason@reclaimerlabs.com. 
