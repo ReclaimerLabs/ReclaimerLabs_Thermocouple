@@ -183,5 +183,5 @@ thermo_lookup_entry_t thermo_lookup_type_s[TYPE_S_LOOKUP_SIZE] = {
 { .temp_C= 1730, .mV= 18.285 },
 { .temp_C= 1740, .mV= 18.395 },
 { .temp_C= 1750, .mV= 18.503 },
-{ .temp_C= 1760, .mV= 18.609 },
+{ .temp_C= 1760, .mV= 18.609 }
 };

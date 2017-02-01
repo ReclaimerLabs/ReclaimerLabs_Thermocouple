@@ -3,6 +3,12 @@
 
 #include "type_k.h"
 #include "type_s.h"
+#include "type_b.h"
+#include "type_e.h"
+#include "type_j.h"
+#include "type_n.h"
+#include "type_r.h"
+#include "type_t.h"
 
 int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float voltage_mV, float cold_junc_C, float *hot_junc_C) {
     const thermo_lookup_entry_t  *thermo_lookup_table;
@@ -16,6 +22,30 @@ int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float vol
         case (TYPE_S):
             thermo_lookup_table = thermo_lookup_type_s;
             thermo_lookup_size  = TYPE_S_LOOKUP_SIZE;
+            break;
+        case (TYPE_B):
+            thermo_lookup_table = thermo_lookup_type_b;
+            thermo_lookup_size  = TYPE_B_LOOKUP_SIZE;
+            break;
+        case (TYPE_E):
+            thermo_lookup_table = thermo_lookup_type_e;
+            thermo_lookup_size  = TYPE_E_LOOKUP_SIZE;
+            break;
+        case (TYPE_J):
+            thermo_lookup_table = thermo_lookup_type_j;
+            thermo_lookup_size  = TYPE_J_LOOKUP_SIZE;
+            break;
+        case (TYPE_N):
+            thermo_lookup_table = thermo_lookup_type_n;
+            thermo_lookup_size  = TYPE_N_LOOKUP_SIZE;
+            break;
+        case (TYPE_R):
+            thermo_lookup_table = thermo_lookup_type_r;
+            thermo_lookup_size  = TYPE_R_LOOKUP_SIZE;
+            break;
+        case (TYPE_T):
+            thermo_lookup_table = thermo_lookup_type_t;
+            thermo_lookup_size  = TYPE_T_LOOKUP_SIZE;
             break;
         default:
             return -1;

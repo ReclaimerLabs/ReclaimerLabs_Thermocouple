@@ -10,7 +10,13 @@ typedef struct {
 
 typedef enum {
     TYPE_K,
-    TYPE_S
+    TYPE_S, 
+    TYPE_B, 
+    TYPE_E, 
+    TYPE_J, 
+    TYPE_N, 
+    TYPE_R, 
+    TYPE_T
 } thermoType_t;
 
 class ReclaimerLabs_Thermocouple {
