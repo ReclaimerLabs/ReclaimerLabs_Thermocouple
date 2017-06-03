@@ -4,8 +4,8 @@
 #include <application.h>
 
 typedef struct {
-  float temp_C;
-  float mV;
+  double temp_C;
+  double mV;
 } thermo_lookup_entry_t;
 
 typedef enum {
@@ -22,7 +22,7 @@ typedef enum {
 class ReclaimerLabs_Thermocouple {
     public:
         ReclaimerLabs_Thermocouple(thermoType_t);
-        static int32_t calc_temp(thermoType_t thermoType, float voltage_mV, float cold_junc_C, float *hot_junc_C);
+        static int32_t calc_temp(thermoType_t thermoType, double voltage_mV, double cold_junc_C, double *hot_junc_C);
     
     private:
 };

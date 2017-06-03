@@ -10,7 +10,7 @@
 #include "type_r.h"
 #include "type_t.h"
 
-int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float voltage_mV, float cold_junc_C, float *hot_junc_C) {
+int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, double voltage_mV, double cold_junc_C, double *hot_junc_C) {
     const thermo_lookup_entry_t  *thermo_lookup_table;
           uint32_t                thermo_lookup_size;
 
@@ -62,7 +62,7 @@ int32_t ReclaimerLabs_Thermocouple::calc_temp(thermoType_t thermoType, float vol
     // convert cold junction temperature to "voltage"
     // linear search, which could be sped up with binary search for large tables
     uint32_t i=1;
-    float total_mV;
+    double total_mV;
     while ( i<(thermo_lookup_size-1)) {
         if ( cold_junc_C <= thermo_lookup_table[i].temp_C ) {
             break;
