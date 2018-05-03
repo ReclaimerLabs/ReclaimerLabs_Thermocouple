@@ -1,3 +1,6 @@
+#ifndef RECLAIMERLABS_THERMOCOUPLE_TYPE_T
+#define RECLAIMERLABS_THERMOCOUPLE_TYPE_T
+
 #include "ReclaimerLabs_Thermocouple.h"
 
 #define TYPE_T_LOOKUP_SIZE 68
@@ -71,3 +74,4 @@ thermo_lookup_entry_t thermo_lookup_type_t[TYPE_T_LOOKUP_SIZE] = {
 { .temp_C=  390, .mV= 20.255 },
 { .temp_C=  400, .mV= 20.872 }
 };
+#endif

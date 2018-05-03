@@ -1,4 +1,8 @@
-#include <application.h>
+#ifdef ARDUINO
+    #include <Arduino.h>
+#else
+    #include <application.h>
+#endif
 #include "ReclaimerLabs_Thermocouple.h"
 
 #include "type_k.h"

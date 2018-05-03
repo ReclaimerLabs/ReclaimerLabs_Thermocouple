@@ -1,7 +1,11 @@
 #ifndef RECLAIMERLABS_THERMOCOUPLE_H
 #define RECLAIMERLABS_THERMOCOUPLE_H
 
-#include <application.h>
+#ifdef ARDUINO
+	#include <Arduino.h>
+#else
+	#include <application.h>
+#endif
 
 typedef struct {
   double temp_C;
@@ -9,7 +13,7 @@ typedef struct {
 } thermo_lookup_entry_t;
 
 typedef enum {
-    TYPE_K,
+    TYPE_K = 0,
     TYPE_S, 
     TYPE_B, 
     TYPE_E, 
